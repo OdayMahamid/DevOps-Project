@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Building our image') {
             steps{
-                sh 'sudo docker build -t web .'
+                sh 'docker build -t web .'
             }
         }
         stage('Login') {
@@ -21,12 +21,12 @@ pipeline {
 	}  
 	stage('Tag') {
 	    steps {
-	         sh 'sudo docker tag web oday2211/web'
+	         sh 'docker tag web oday2211/web'
 	     }
 	}
         stage('Push') {
             steps {
-		sh 'sudo docker push oday2211/web'
+		sh 'docker push oday2211/web'
 	   }  
         }
     }
