@@ -35,4 +35,5 @@ COPY ./index.html /usr/share/nginx/html/index.html
 
 You can access the application here: http://localhost/
 
+![Screenshot from 2021-12-05 23-35-52](https://user-images.githubusercontent.com/58177069/144765033-8f3c958a-1c9c-4444-870a-d031e05fe1c1.png)
 
