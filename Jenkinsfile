@@ -4,11 +4,7 @@ pipeline {
 		DOCKERHUB_CREDENTIALS=credentials('DockerHubNew')
 	}
     stages {
-        stage('Cloning our Git') {
-            steps {
-                git 'https://github.com/OdayMahamid/devOps-project.git'
-            }
-        }
+  
         stage('Building our image') {
             steps{
                 sh 'docker build -t web .'
