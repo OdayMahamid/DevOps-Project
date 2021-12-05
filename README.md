@@ -1,9 +1,35 @@
 # devOps-project
 
+
+## Solution steps
+1. Create html file `index.html` that display my name and my DOB as plain text 
+2. Dockerfile:
+```
+FROM nginx:latest
+# Copy html file from the current dir to the nginx image
+COPY ./index.html /usr/share/nginx/html/index.html
+```
+
+4. Create Jenkinsfile that incalude script to build and push the image in to Dockerhub, we run it in the jenkins
+
+
+5. Create a deployment yml named `deployment yml` with service:
+    * import image from dockerhub that I have created 
+    * Expose the deploy using type = ClusterIP
+    * port 80
+
+6. Create Ingress yml neamed `Ingress.yml` that manages external access to the services in a cluster.
+    * Path `/` 
+    * Port 80 
+
+
+
+
+
 ## Run the project:
 
-    $ git clone https://github.com/AHMADSK1997/Kaltura-Devops-Task.git
-    $ cd Kaltura-Devops-Task
+    $ git clone https://github.com/OdayMahamid/devOps-project.git
+    $ cd devOps-project
     $ kubectl apply -f deployment.yml
     $ kubectl apply -f Ingress.yml
 
